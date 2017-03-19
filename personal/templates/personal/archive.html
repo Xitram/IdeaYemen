@@ -1,0 +1,30 @@
+{% extends "personal/blogheader.html" %}
+
+
+{% block content %}
+<!-- Custom styles for this template -->
+
+
+  <body>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">الأكثر قراءة</h1>
+        <p class="lead blog-description">المزيد: <a href="/newsarchive">اخبار</a>  -    <a href="/culturearchive">ثقافة</a>  -
+          <a href="/artarchive">فن</a>  -    <a href="/medicinearchive">طب</a></p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+        {% for post in object_list %}
+          <div class="blog-post">
+          <h5>{{ post.date|date:"Y-m-d" }}<a href=
+            "/news/{{post.id}}"> {{ post.title }}</a></h5>
+
+
+        </div><!-- /.blog-main -->
+      {% endfor %}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "personal/blogheader.html" %}
+
+
+
+{% block content %}
+<!-- Custom styles for this template -->
+
+
+  <body>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">الأكثر قراءة</h1>
+        <p class="lead blog-description">المزيد: <a href="/newsarchive">اخبار</a>  -    <a href="/culturearchive">ثقافة</a>  -   
+          <a href="/artarchive">فن</a>  -    <a href="/medicinearchive">طب</a>  </p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title"> {{ object.title }}</h2>
+            <p class="blog-post-meta">{{ object.date}} <a href="/about">IdeaYemen</a></p>
+            <p> {{ object.body|safe }} </p>
+
+
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+{% endblock %}

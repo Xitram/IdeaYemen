@@ -1,0 +1,25 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+<body>
+
+  <div class="container">
+
+    <div class="blog-header">
+      <h1 class="blog-title"></h1>
+      <p class="lead blog-description"></p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-8 col-sm-offset-3 blog-main">
+
+      {% for c in content %}
+        <div class="blog-post">
+          <p> {{ c.AboutInfo|safe }} </p>
+      {% endfor %}
+
+
+
+      </div><!-- /.blog-main -->
+{% endblock %}
